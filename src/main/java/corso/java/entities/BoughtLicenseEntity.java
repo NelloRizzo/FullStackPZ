@@ -1,30 +1,43 @@
 package corso.java.entities;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
-public class LicenseEntity {
+@Builder(setterPrefix="with")
+public class BoughtLicenseEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	int id;
+	Long id;
+	@Column(length=50,nullable=false)
+	String serialCode;
+	@Temporal(TemporalType.DATE)
+	LocalDate date;
 	@ManyToOne
-	Software_Entity software;
-	@Column(length=50,nullable=false)
-	int life;
-	@Column(length=50,nullable=false)
-	double price;
-	@Column(length=50,nullable=false)
-	String type;
+	LicenseEntity model;
+	@ManyToOne
+	Azienda_Entity company;
+	
+	
+	
+
+
+
+
 }
