@@ -14,9 +14,9 @@ public class Azienda_Entity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	@Column(name = "nome",nullable = false)
+	@Column(name = "nome",nullable = false,length=50)
 	private String nome;
-	@Column(name = "partita_iva", nullable = false)
+	@Column(name = "partita_iva", nullable = false,length=11)
 	private String partitaIva;
 
 }
