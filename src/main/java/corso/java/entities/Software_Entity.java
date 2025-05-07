@@ -4,9 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Builder (setterPrefix = "with")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,6 +18,6 @@ public class Software_Entity {
 	@GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
 	private Integer id;
 	private String name;
-	private double price;
+	private double version;
 
 }
