@@ -1,4 +1,4 @@
-package corso.java.controller;
+package corso.java.controllers;
 
 import java.util.List;
 

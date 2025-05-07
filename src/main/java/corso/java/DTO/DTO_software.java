@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder (setterPrefix = "with")
 
 public class DTO_software {
-	private double version;
+	private String version;
 	private String name;
 	
 }
