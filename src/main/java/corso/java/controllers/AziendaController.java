@@ -1,0 +1,35 @@
+package corso.java.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import corso.java.DTO.DTO_azienda;
+import corso.java.services.AziendaService;
+
+@RestController
+@RequestMapping("/azienda")
+public class AziendaController {
+	@Autowired
+	private AziendaService aziendaService;
+	
+	@GetMapping
+	public ResponseEntity<List<DTO_azienda>> getAllAziende(){
+		List<DTO_azienda> aziende = aziendaService.getAllAziende();
+		return ResponseEntity.ok(aziende);
+	}
+	
+	@PostMapping
+	public ResponseEntity<String> addAzienda(@RequestBody DTO_azienda a){
+		aziendaService.addAzienda(a);
+		return ResponseEntity.status(HttpStatus.CREATED).body("Nuova azienda inserita con successo!");
+	}
+	
+}
