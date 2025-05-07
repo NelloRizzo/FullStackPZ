@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "147f208b-f495-4495-8b56-f409829082b3",
+		"name": "Software List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43494077",
+		"_collection_link": "https://roccodatena-8131446.postman.co/workspace/roccodatena's-Workspace~fb520c0e-cfef-4ed6-8c9b-7e34cd9d33f8/collection/43494077-147f208b-f495-4495-8b56-f409829082b3?action=share&source=collection_link&creator=43494077"
+	},
+	"item": [
+		{
+			"name": "Getallsoftwares",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/softwares/allsoftwares",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"softwares",
+						"allsoftwares"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"office\", \r\n    \"version\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/softwares/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"softwares",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
