@@ -9,6 +9,7 @@ const apiconfig = {
   endpoints: {
     allsoftwares: '/allsoftwares',
     generate: '/generate',
+    delete: '/delete',
   }
 };
 
@@ -29,7 +30,9 @@ export class SoftwareService {
       return this.http.post<void>(apiconfig.baseUrl + apiconfig.endpoints.generate, software);
     }
 
-    
+    cancellaSoftware(id: number): Observable<void> {
+      return this.http.delete<void>(apiconfig.baseUrl + apiconfig.endpoints.delete + '/' + id);
+    }    
 
 
 }

@@ -13,7 +13,8 @@ import { SoftwareService } from '../../../services/software-services/software.se
 export class AggiungiSoftwareComponent {
   software: Software = {
     name: '',
-    version: ''
+    version: '',
+    id: 0 // Assuming id is auto-generated and not needed for creation
   };
 
   constructor(private softwareService: SoftwareService) {}

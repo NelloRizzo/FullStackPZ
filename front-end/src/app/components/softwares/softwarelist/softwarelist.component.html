@@ -2,5 +2,6 @@
 <ul>
     <li *ngFor="let software of softwares">
         {{software.name}} - {{software.version}}
+        <button (click) = "cancellaSoftware(software.id)"> Elimina </button>
     </li>
 </ul>

@@ -37,6 +37,12 @@ public class SoftwareServiceImpl implements SoftwareService{
 		softwareRepository.save(software);
 	}
 
+	@Override
+	public void eliminaSoftware(Long id) {
+		softwareRepository.deleteById(id);
+		
+	}
+
 
 	
 }

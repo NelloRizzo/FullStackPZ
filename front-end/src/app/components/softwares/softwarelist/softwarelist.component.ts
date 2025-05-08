@@ -19,4 +19,9 @@ export class SoftwarelistComponent implements OnInit {
       this.softwares = response;
     })
   }
+  cancellaSoftware(id: number) {
+    this.softwareService.cancellaSoftware(id).subscribe(() => {
+      this.softwares = this.softwares.filter(software => software.id !== id);
+    });
+  }
 }

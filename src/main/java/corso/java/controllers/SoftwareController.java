@@ -1,9 +1,12 @@
 package corso.java.controllers;
 
+import java.awt.PageAttributes.MediaType;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,6 +36,11 @@ public class SoftwareController {
 	public void generaSoftware(@RequestBody DTO_software softwaredto) {
 		softwareService.generaSoftware(softwaredto);
 
+	}
+	@DeleteMapping ("/delete/{id}")
+	public void cancellaSoftware(@PathVariable Long id) {
+		softwareService.eliminaSoftware(id);
+		
 	}
 
 }
