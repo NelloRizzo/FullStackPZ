@@ -1,0 +1,19 @@
+.listaAziende{
+    border: 3px solid black;
+    border-radius: 15px 50px 30px;
+    width: fit-content;
+    background: greenyellow;
+}
+
+.rigaTitoli{
+    display: flex;
+    gap: 10px;
+    background: green;
+    color: white;
+}
+
+.rigaDati{
+    display: flex;
+    gap: 10px;
+    color: grey;
+}
