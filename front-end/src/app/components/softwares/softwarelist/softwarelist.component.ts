@@ -22,8 +22,19 @@ export class SoftwarelistComponent implements OnInit {
     })
   }
   cancellaSoftware(id: number) {
+    if(this.idDaEliminare <= 0) {
+      alert('Inserire un id valido!');
+      return
+    }
+  
     this.softwareService.cancellaSoftware(this.idDaEliminare).subscribe(() => {
       alert('Software eliminato con successo!');
-    });
+    },
+     error => {
+      console.error('Id:', error);
+      alert('Software non presente in database!');
+     
+
+    })
   }
 }
