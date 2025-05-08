@@ -37,6 +37,16 @@ public class SoftwareServiceImpl implements SoftwareService{
 		softwareRepository.save(software);
 	}
 
+	@Override
+	public void eliminaSoftware(Long id) {
+		if (!softwareRepository.existsById(id)) {
+			throw new IllegalArgumentException("Software non presente in Database");
+			
+		}
+		softwareRepository.deleteById(id);
+		
+	}
+
 
 	
 }
