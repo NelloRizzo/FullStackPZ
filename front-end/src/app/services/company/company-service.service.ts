@@ -14,5 +14,9 @@ export class CompanyServiceService {
   getAllCompanies(): Observable<Company[]> {
     return this.http.get<Company[]>('/api/azienda/all');
   }
+
+  addCompany(newCompany: Company) : Observable<Company>{
+    return this.http.post<Company>('/api/azienda', newCompany);
+  }
   
 }
