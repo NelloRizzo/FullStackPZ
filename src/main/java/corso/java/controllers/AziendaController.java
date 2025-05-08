@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,8 +28,8 @@ public class AziendaController {
 		return ResponseEntity.ok(aziende);
 	}
 	
-	@GetMapping("/id")
-	public ResponseEntity<DTO_azienda> getAziendaById(@RequestParam int idCompany){
+	@GetMapping("/{idCompany}")
+	public ResponseEntity<DTO_azienda> getAziendaById(@PathVariable int idCompany){
 		DTO_azienda company = aziendaService.getCompanyById(idCompany);
 		return ResponseEntity.ok(company);
 	}
