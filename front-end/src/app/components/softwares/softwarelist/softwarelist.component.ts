@@ -23,7 +23,7 @@ export class SoftwarelistComponent implements OnInit {
   }
   cancellaSoftware(id: number) {
     this.softwareService.cancellaSoftware(this.idDaEliminare).subscribe(() => {
-
+      
     });
   }
 }
