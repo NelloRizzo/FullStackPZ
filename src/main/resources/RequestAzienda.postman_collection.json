@@ -13,14 +13,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/azienda",
+					"raw": "http://localhost:8080/api/azienda/all",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"azienda"
+						"api",
+						"azienda",
+						"all"
 					]
 				}
 			},
@@ -36,7 +38,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nome\" : \"NeverCrack\",\r\n    \"partitaIva\": \"1212132141Cioas\"\r\n}",
+					"raw": "{\r\n    \"nome\" : \"NeverBack\",\r\n    \"partitaIva\": \"01234567893\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -44,13 +46,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/azienda",
+					"raw": "http://localhost:8080/api/azienda",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
 						"azienda"
 					]
 				}

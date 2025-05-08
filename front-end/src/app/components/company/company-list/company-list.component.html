@@ -1,0 +1,12 @@
+<div class="CompaniesList">
+    <h2>Lista Aziende</h2>
+    <ol *ngIf="companies.length > 0" else noCompanies>
+        <li *ngFor="let company of companies">
+            {{company.nome}}
+        </li>
+    </ol>
+</div>
+<ng-template #noCompanies>
+    <p>Nessuna azienda nel db.</p>
+</ng-template>
+

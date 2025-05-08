@@ -15,12 +15,12 @@ import corso.java.DTO.DTO_azienda;
 import corso.java.services.AziendaService;
 
 @RestController
-@RequestMapping("/azienda")
+@RequestMapping("/api/azienda")
 public class AziendaController {
 	@Autowired
 	private AziendaService aziendaService;
 	
-	@GetMapping
+	@GetMapping("/all")
 	public ResponseEntity<List<DTO_azienda>> getAllAziende(){
 		List<DTO_azienda> aziende = aziendaService.getAllAziende();
 		return ResponseEntity.ok(aziende);
