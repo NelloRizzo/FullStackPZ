@@ -19,9 +19,15 @@ const apiconfig = {
 export class SoftwareService {
 
   constructor(private http:HttpClient) { }
+
     getallsoftwares(): Observable<Software[]> {
       return this.http
       .get<Software[]>(apiconfig.baseUrl + apiconfig.endpoints.allsoftwares);
+    }
 
-  }
+    generaSoftware(software: Software): Observable<void> {
+      return this.http.post<void>(apiconfig.baseUrl + apiconfig.endpoints.generate, software);
+    }
+
+
 }
