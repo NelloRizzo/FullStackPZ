@@ -1,9 +1,13 @@
+body {
+    background-color: red;
+    border-radius: 0.4em;
+}
 /* General styles for better visibility */
 :host {
     display: block;
     padding: 20px;
     background-color: #f9f9f9;
-    color: #333;
+    color: black;
     font-family: Arial, sans-serif;
 }
 
@@ -11,7 +15,7 @@
 header {
     font-size: 24px;
     font-weight: bold;
-    color: #443333;
+    color: black;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -58,5 +62,5 @@ h2 {
     font-family: Arial, sans-serif; 
     font-weight: bold;
     margin-bottom: 10px;
-    color: #333;
+    color:black;
 }
