@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import corso.java.entities.LicenseEntity;
 
-public interface LicenseModelRepository extends JpaRepository<LicenseEntity, Integer> {
+public interface LicenseEntityRepository extends JpaRepository<LicenseEntity, Integer> {
 
 }

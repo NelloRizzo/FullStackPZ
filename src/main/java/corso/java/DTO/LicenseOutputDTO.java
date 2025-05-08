@@ -12,9 +12,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder(setterPrefix = "with")
-public class LicenseDTO {
+public class LicenseOutputDTO {
     int id;
-	int softwareId;
+	Software_Entity software;
 	int life;
 	double price;
 	String type;

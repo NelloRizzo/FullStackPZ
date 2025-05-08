@@ -1,0 +1,71 @@
+/* Sfondo generale */
+body {
+    background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 30px;
+    color: #212121;
+  }
+  
+  /* Testo introduttivo */
+  p {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #0d47a1;
+    text-align: center;
+  }
+  
+  /* Lista licenze */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Singolo item (card) */
+  li {
+    background: #ffffff;
+    border-left: 5px solid #42a5f5;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    color: #37474f;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effetto */
+  li:hover {
+    background-color: #e3f2fd;
+    border-left-color: #1e88e5;
+    box-shadow: 0 6px 15px rgba(30, 136, 229, 0.2);
+  }
+  
+  /* Informazioni extra */
+  li span {
+    display: block;
+    margin-top: 8px;
+    font-weight: 500;
+  }
+  
+  /* Box con griglia */
+  .license {
+    display: grid;
+    grid-template-columns: 160px auto;
+    gap: 12px 20px;
+    background-color: #fff3e0;
+    border-left: 5px solid #ffa726;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 3px 6px rgba(255, 152, 0, 0.15);
+  }
+  
+  /* Dettagli licenza */
+  .license div {
+    font-size: 16px;
+    color: #5d4037;
+  }
+  

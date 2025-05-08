@@ -2,6 +2,8 @@ package corso.java.controllers;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,38 +14,34 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import corso.java.DTO.LicenseDTO;
+import corso.java.DTO.LicenseOutputDTO;
 import corso.java.entities.BoughtLicenseEntity;
 import corso.java.entities.LicenseEntity;
 import corso.java.services.LicenseService;
 import corso.java.services.LicenseServiceImpl;
 
 @RestController
-@RequestMapping("/license")
+@RequestMapping("/api/license")
 public class LicenseController {
-
+private static final Logger log = LoggerFactory.getLogger(LicenseController.class);
 	@Autowired
 	LicenseService licenseService;
 
 	@PostMapping("/add")
-	public ResponseEntity<LicenseEntity> addLicense(@RequestBody LicenseEntity license) {
-		licenseService.addLicense(license);
-		return ResponseEntity.ok(license);
+	public ResponseEntity<LicenseEntity> addLicense(@RequestBody LicenseDTO license) {
+		LicenseEntity l=licenseService.addLicense(license);
+		return ResponseEntity.ok(l);
 	}
 
 	@PostMapping("/bought")
-	public ResponseEntity<BoughtLicenseEntity> addBoughtLicense(@RequestBody LicenseEntity model,@RequestParam int id) {
-		BoughtLicenseEntity bought= licenseService.addBoughtLicense(model, id);
-		return ResponseEntity.ok(BoughtLicenseEntity.builder()
-				.withSerialCode(bought.getSerialCode())
-				.withCompany(bought.getCompany())
-				.withDate(bought.getDate())
-				.withModel(model)
-				.build()
-				);
+	public ResponseEntity<BoughtLicenseEntity> addBoughtLicense(@RequestBody BoughtLicenseEntity bLicense) {
+		BoughtLicenseEntity bought= licenseService.addBoughtLicense(bLicense);
+		log.info("{}",bought);
+		return ResponseEntity.ok(bought);
 	}
 
 	@GetMapping("/showAll")
-	public ResponseEntity<List<LicenseDTO>> showAll() {
+	public ResponseEntity<List<LicenseOutputDTO>> showAll() {
 		return ResponseEntity.ok(licenseService.showAll());
 
 	}
