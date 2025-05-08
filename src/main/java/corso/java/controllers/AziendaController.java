@@ -6,24 +6,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import corso.java.DTO.DTO_azienda;
 import corso.java.services.AziendaService;
 
 @RestController
-@RequestMapping("/azienda")
+@RequestMapping("/api/azienda")
 public class AziendaController {
 	@Autowired
 	private AziendaService aziendaService;
 	
-	@GetMapping
+	@GetMapping("/all")
 	public ResponseEntity<List<DTO_azienda>> getAllAziende(){
 		List<DTO_azienda> aziende = aziendaService.getAllAziende();
 		return ResponseEntity.ok(aziende);
+	}
+	
+	@GetMapping("/{idCompany}")
+	public ResponseEntity<DTO_azienda> getAziendaById(@PathVariable int idCompany){
+		DTO_azienda company = aziendaService.getCompanyById(idCompany);
+		return ResponseEntity.ok(company);
 	}
 	
 	@PostMapping

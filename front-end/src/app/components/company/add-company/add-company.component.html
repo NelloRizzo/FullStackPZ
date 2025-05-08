@@ -1,0 +1,11 @@
+<div>
+<form (ngSubmit)="onSubmit()">
+    <label for="nome">Nome Azienda:</label>
+    <input id="nome" [(ngModel)]="newCompany.nome" name="nome" required />
+  
+    <label for="partitaIva">Partita IVA:</label>
+    <input id="partitaIva" [(ngModel)]="newCompany.partitaIva" name="partitaIva" required />
+  
+    <button type="submit">Aggiungi Azienda</button>
+  </form>
+</div>

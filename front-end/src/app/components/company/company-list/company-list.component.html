@@ -1,0 +1,11 @@
+<div class="listaAziende">
+    <div class="rigaTitoli">
+        <div class="colonna">Nome Azienda</div><div class="colonna">Partita IVA</div>
+    </div>
+    <div *ngIf="companies.length > 0" else noCompanies>
+        <div class="rigaDati" *ngFor="let company of companies">
+            <div class="colonna">{{company.nome}}</div><div class="colonna">{{company.partitaIva}}</div>
+        </div> 
+    </div>
+</div>
+

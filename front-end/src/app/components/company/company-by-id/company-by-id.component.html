@@ -1,0 +1,22 @@
+<div>
+    <label for="companyId">Inserisci ID Azienda:</label>
+    <input id="companyId" [(ngModel)]="companyId" name="companyId" type="number" required />
+    <button (click)="getCompany()">Cerca Azienda</button>
+  </div>
+  <table *ngIf="company">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Partita IVA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="company">
+        <td>{{ company.id }}</td>
+        <td>{{ company.nome }}</td>
+        <td>{{ company.partitaIva }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="company === undefined">Nessuna azienda trovata con questo ID.</p>
