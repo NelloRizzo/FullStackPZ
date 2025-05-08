@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Software } from '../../../services/models';
 import { SoftwareService } from '../../../services/software.service';
 import { NgFor } from '@angular/common';
@@ -9,11 +9,11 @@ import { NgFor } from '@angular/common';
   templateUrl: './softwarelist.component.html',
   styleUrl: './softwarelist.component.css'
 })
-export class SoftwarelistComponent {
+export class SoftwarelistComponent implements OnInit {
   softwares: Software[] = [];
   constructor (private softwareService: SoftwareService) { }
 
-  nginOnInit() : void{
+  ngOnInit() : void{
     this.softwareService.getallsoftwares().subscribe(response => {
       this.softwares = response;
     })
