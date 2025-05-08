@@ -59,6 +59,36 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Azienda da ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/azienda/id?idCompany=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"azienda",
+						"id"
+					],
+					"query": [
+						{
+							"key": "idCompany",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

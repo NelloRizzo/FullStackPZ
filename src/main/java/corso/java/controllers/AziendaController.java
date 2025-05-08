@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import corso.java.DTO.DTO_azienda;
@@ -24,6 +25,12 @@ public class AziendaController {
 	public ResponseEntity<List<DTO_azienda>> getAllAziende(){
 		List<DTO_azienda> aziende = aziendaService.getAllAziende();
 		return ResponseEntity.ok(aziende);
+	}
+	
+	@GetMapping("/id")
+	public ResponseEntity<DTO_azienda> getAziendaById(@RequestParam int idCompany){
+		DTO_azienda company = aziendaService.getCompanyById(idCompany);
+		return ResponseEntity.ok(company);
 	}
 	
 	@PostMapping

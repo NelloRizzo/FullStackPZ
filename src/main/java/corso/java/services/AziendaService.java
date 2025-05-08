@@ -11,7 +11,7 @@ import corso.java.entities.Azienda_Entity;
 import corso.java.repository.AziendaRepository;
 
 @Service
-public class AziendaService implements AziendaServiceInter{
+public class AziendaService implements AziendaServiceInter {
 	@Autowired
 	private AziendaRepository aziendaRepository;
 
@@ -23,25 +23,28 @@ public class AziendaService implements AziendaServiceInter{
 	public List<DTO_azienda> getAllAziende() {
 		try {
 			List<Azienda_Entity> aziende = aziendaRepository.findAll();
-			return aziende.stream().map(a -> DTO_azienda.builder()
-					.withId(a.getId())
-					.withNome(a.getNome())
-					.withPartitaIva(a.getPartitaIva())
-					.build()).toList();
-		}catch(Exception e) {
-			throw new ServiceException ("Errore!");
+			return aziende.stream().map(a -> DTO_azienda.builder().withId(a.getId()).withNome(a.getNome())
+					.withPartitaIva(a.getPartitaIva()).build()).toList();
+		} catch (Exception e) {
+			throw new ServiceException("Errore!");
 		}
 	}
+
 	@Override
 	public void addAzienda(DTO_azienda aziendaDto) {
-		Azienda_Entity azienda = Azienda_Entity.builder()
-				.withId(aziendaDto.getId())
-				.withNome(aziendaDto.getNome())
-				.withPartitaIva(aziendaDto.getPartitaIva())
-				.build();
+		Azienda_Entity azienda = Azienda_Entity.builder().withId(aziendaDto.getId()).withNome(aziendaDto.getNome())
+				.withPartitaIva(aziendaDto.getPartitaIva()).build();
 		aziendaRepository.save(azienda);
 	}
-	
-	
-	
+
+	@Override
+	public DTO_azienda getCompanyById(int idCompany) {
+
+		Azienda_Entity company = aziendaRepository.findById(idCompany)
+				.orElseThrow(() -> new RuntimeException("Azienda non trovata!"));
+
+		return DTO_azienda.builder().withId(company.getId()).withNome(company.getNome())
+				.withPartitaIva(company.getPartitaIva()).build();
+	}
+
 }
