@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Software } from '../../../services/models';
-import { SoftwareService } from '../../../services/software.service';
 import { FormsModule } from '@angular/forms';
+import { SoftwareService } from '../../../services/software-services/software.service';
 
 @Component({
   selector: 'app-aggiungi-software',

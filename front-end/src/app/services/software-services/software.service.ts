@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Software } from './models';
+import { Software } from '../models';
 
 
 const apiconfig = {
@@ -28,6 +28,8 @@ export class SoftwareService {
     generaSoftware(software: Software): Observable<void> {
       return this.http.post<void>(apiconfig.baseUrl + apiconfig.endpoints.generate, software);
     }
+
+    
 
 
 }

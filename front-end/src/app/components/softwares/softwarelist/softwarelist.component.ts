@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Software } from '../../../services/models';
-import { SoftwareService } from '../../../services/software.service';
+
 import { NgFor } from '@angular/common';
+import { SoftwareService } from '../../../services/software-services/software.service';
 
 @Component({
   selector: 'app-softwarelist',
