@@ -34,6 +34,7 @@ h2 {
   color: black;
 }
 a {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-decoration: none;
   color: #3a0303;
   transition: color 0.3s ease;
@@ -42,10 +43,13 @@ a {
   padding: 5px;
   display: inline-block;
   text-decoration: underline;
+  background-color: rgb(49, 164, 29);
+  border-radius: 0.3em;
+  border:#0909e3;
 }
 
 a:hover {
-  color: #51b300;
+  color: #05494f;
   text-decoration: underline;
   cursor: pointer;
 }
