@@ -3,10 +3,12 @@ import { LicenseService } from '../../../services/license/license.service';
 import { LicenseComponent } from '../license/license.component';
 import { NgFor } from '@angular/common';
 import { licenseModel } from '../../../services/models/licenseModel';
+import { DeleteLicenseComponent } from '../delete-license/delete-license.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-license-list',
-  imports: [NgFor,LicenseComponent],
+  imports: [NgFor,LicenseComponent,DeleteLicenseComponent,RouterLink],
   templateUrl: './license-list.component.html',
   styleUrl: './license-list.component.css'
 })

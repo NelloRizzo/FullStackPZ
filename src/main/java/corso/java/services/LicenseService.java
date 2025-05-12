@@ -14,6 +14,6 @@ public interface LicenseService {
 	public LicenseEntity addLicense(LicenseDTO model);
 	public List<LicenseOutputDTO> showAll();
 	public BoughtLicenseEntity addBoughtLicense(BoughtLicenseEntity bLicense);
-	
+	public LicenseDTO deleteLicense(int id);
 
 }

@@ -21,5 +21,7 @@ export class LicenseService {
     return this.http.post('/api/license/add',license)
   }
 
-  
+  deleteLicense(id:number){
+    return this.http.delete(`/api/license/delete/${id}`)
+  }
 }
