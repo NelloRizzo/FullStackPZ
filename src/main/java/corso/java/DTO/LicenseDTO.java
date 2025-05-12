@@ -13,7 +13,6 @@ import lombok.Setter;
 @Setter
 @Builder(setterPrefix = "with")
 public class LicenseDTO {
-    int id;
 	int softwareId;
 	int life;
 	double price;

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SoftwareService } from '../../../services/software-services/software.service';
 import { FormsModule, NgModel } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-elimina-software',
@@ -13,24 +13,30 @@ export class EliminaSoftwareComponent {
 
   idDaEliminare: number = 0;
 
-  constructor(private softwareService: SoftwareService, private router: Router) { }
+  constructor(private softwareService: SoftwareService,
+    private r: ActivatedRoute,
+    private routes: Router,
+  ) { }
+
+  ngOnInit() {
+    this.r.params.subscribe(params => {
+      this.idDaEliminare = params['id'];
+    });
+  }
 
   cancellaSoftware(id: number) {
     if (this.idDaEliminare <= 0) {
       alert('Inserire un id valido!');
-      return
     }
 
     this.softwareService.cancellaSoftware(this.idDaEliminare).subscribe(() => {
       alert('Software eliminato con successo!');
-      this.router.navigate(['software/list']); // Navigate to the software list page after successful deletion
+      this.routes.navigate(['software/list']);
     },
       error => {
         console.error('Id:', error);
         alert('Software non presente in database!');
-    
-
-
+        this.routes.navigate(['software/list']);
       })
   }
 }

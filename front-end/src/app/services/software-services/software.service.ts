@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Software } from '../models';
+import { Software } from '../softwareModel';
 
 
 const apiconfig = {
@@ -19,20 +19,20 @@ const apiconfig = {
 })
 export class SoftwareService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-    getallsoftwares(): Observable<Software[]> {
-      return this.http
+  getAllSoftwares(): Observable<Software[]> {
+    return this.http
       .get<Software[]>(apiconfig.baseUrl + apiconfig.endpoints.allsoftwares);
-    }
+  }
 
-    generaSoftware(software: Software): Observable<void> {
-      return this.http.post<void>(apiconfig.baseUrl + apiconfig.endpoints.generate, software);
-    }
+  generaSoftware(software: Software): Observable<void> {
+    return this.http.post<void>(apiconfig.baseUrl + apiconfig.endpoints.generate, software);
+  }
 
-    cancellaSoftware(id: number): Observable<void> {
-      return this.http.delete<void>(apiconfig.baseUrl + apiconfig.endpoints.delete + '/' + id);
-    }    
+  cancellaSoftware(id: number): Observable<void> {
+    return this.http.delete<void>(apiconfig.baseUrl + apiconfig.endpoints.delete + '/' + id);
+  }
 
 
 }

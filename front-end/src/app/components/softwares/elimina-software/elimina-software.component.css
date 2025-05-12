@@ -1,34 +1,27 @@
-:host {
-    display: block;
-    padding: 1rem;
-    background-color: #f12e2e;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+h2 {
+    font-family: monospace;
+    color:  rgb(217, 217, 22);
+    background-color: black;
+    border-radius: 0.3em;
+    margin: 1em;
 }
 
-h1 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
+div {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: black;
+    color: rgb(217, 217, 22);
+    border-radius: 0.3em;
+    border-color: yellowgreen;
+    margin: 0.5em;
 }
 
 button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: yellowgreen;
+    border-radius: 0.3em;
 }
 
 button:hover {
-    background-color: #0056b3;
-}
-
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+    background-color: chocolate;
+    cursor: pointer;
 }

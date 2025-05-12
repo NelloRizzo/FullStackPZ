@@ -1,1 +1,7 @@
-<p>license works!</p>
+<div>
+    <label for="life">Lifecycle:<input type="number" [(ngModel)]="addLicense.life"></label><br>
+    <label for="price">Price:<input type="number" [(ngModel)]="addLicense.price"></label><br>
+    <label for="type">Type:<input type="text" [(ngModel)]="addLicense.type"></label><br>
+    <label for="softwareId">Software Id:<input type="number" [(ngModel)]="addLicense.softwareId"></label><br>
+    <button type="button" (click)="onSubmit()">Submit</button>
+</div>
