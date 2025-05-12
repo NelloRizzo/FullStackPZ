@@ -1,84 +1,68 @@
 /* Styles for aggiungi-software.component.css */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0707f0;
-    border: #5ca300;
-    border-radius: 0.4em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding: 0.5em;
+  background-color: #0707f0;
+  border-radius: 0.4em;
+  text-align: center;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #9e0b0b;
-    border: 2px solid #054386;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    color: #007bff;
-    text-align: center;
-    margin-bottom: 20px;
+h2 {
+  text-align: center;
+  background-color: #007bff;
+  border-radius: 0.3em;
 }
 
 button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color:  #216278;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #216278;
+  border: b;
+  border-radius: 0.4em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #131313;
+  background-color: #131313;
 }
 
-input, select, textarea {
-    width: 50%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #0e0101;
-    border-radius: 4px;
-    font-size: 14px;
-    background-color: #216278;
+input {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #0e0101;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #19a4d3;
+  border: outset;
+  border-color: #0e0101;
 }
 
-input:focus, select:focus, textarea:focus {
-    border-color: #007bff;
-    outline: none;
+input:focus {
+  border-color: #0b498c;
+  outline: auto;
 }
 
 label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .error {
-    color: #ff0000;
-    font-size: 14px;
-    margin-top: -10px;
-    margin-bottom: 10px;
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
 .success {
-    color: #28a745;
-    font-size: 14px;
-    margin-top: -10px;
-    margin-bottom: 10px;
-}
-h2 {
-    font-size: 20px;
-    font-family: Arial, sans-serif; 
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #130202;
+  color: #28a745;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }

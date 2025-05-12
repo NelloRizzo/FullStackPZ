@@ -1,16 +1,12 @@
 <body>
   <h2>Aggiungi Software</h2>
-  <form (ngSubmit)="submit()" #form="ngForm">
-    <label>
-      Nome: 
-      <input type="text" [(ngModel)]="software.name" name="name" required />
-    </label>
+  <form (submit)="submit()">
+    <label>Nome:</label>
+    <input type="text" [(ngModel)]="software.name" name="name" required />
+    <label>Versione:</label>
+    <input type="text" [(ngModel)]="software.version" name="version" required />
     <br>
-    <label>
-      Versione:
-      <input type="text" [(ngModel)]="software.version" name="version" required />
-    </label>
-    <br><br>
-    <button type="submit">Salva</button>
+    <button *ngIf="software.name.length > 0 && software.version.length > 0" 
+      type="submit">Salva</button>
   </form>
 </body>
