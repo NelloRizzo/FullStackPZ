@@ -5,6 +5,7 @@ import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { SoftwareService } from '../../../services/software-services/software.service';
 import { Software } from '../../../services/models';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-license',
@@ -13,7 +14,7 @@ import { Software } from '../../../services/models';
   styleUrl: './license.component.css'
 })
 export class LicenseComponent {
- constructor(private licenseService:LicenseService, private softwareService:SoftwareService){}
+ constructor(private licenseService:LicenseService, private softwareService:SoftwareService,private router:Router){}
  addLicense: addlicenseModel={
   life:0,
   price:0,
@@ -28,7 +29,7 @@ export class LicenseComponent {
  onSubmit(){
   this.licenseService.addLicense(this.addLicense).subscribe( {  
      next: () => {
-        alert('Licenza salvata con successo!');
+        this.router.navigate(['/license/list'])
       },
       error: (err) => {
         console.error('Errore nel salvataggio:', err);
