@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-license-list',
-  imports: [NgFor,LicenseComponent,DeleteLicenseComponent,RouterLink],
+  imports: [NgFor,RouterLink],
   templateUrl: './license-list.component.html',
   styleUrl: './license-list.component.css'
 })
