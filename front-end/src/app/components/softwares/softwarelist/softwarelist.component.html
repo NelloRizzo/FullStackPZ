@@ -1,11 +1,11 @@
 <body>
-
+    <a [routerLink]="['/software/add']">Aggiungi Software</a>
+    <a [routerLink]="['/software/elimina']">Elimina Software</a>
     <h2>Softwarelist</h2>
     <ul>
         <li *ngFor="let software of softwares">
             {{software.name}} - {{software.version}}
         </li>
-    <a [routerLink]="['/software/add']">Aggiungi Software</a>
-    <a [routerLink]="['/software/elimina']">Elimina Software</a>
+   
     </ul>
 </body>
