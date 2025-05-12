@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SoftwareService } from '../../../services/software-services/software.service';
 import { FormsModule, NgModel } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-elimina-software',
@@ -12,7 +13,13 @@ export class EliminaSoftwareComponent {
 
   idDaEliminare: number = 0;
 
-  constructor(private softwareService: SoftwareService) { }
+  constructor(private softwareService: SoftwareService, private r: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.r.params.subscribe(params => { 
+      this.idDaEliminare = params['id'];
+    });
+  }
 
   cancellaSoftware(id: number) {
     if (this.idDaEliminare <= 0) {

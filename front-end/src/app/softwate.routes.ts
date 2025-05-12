@@ -6,7 +6,7 @@ import { EliminaSoftwareComponent } from './components/softwares/elimina-softwar
 const routes: Routes = [
     { path: 'software/list', component: SoftwarelistComponent},
     { path: 'software/add', component: AggiungiSoftwareComponent},
-    { path: 'software/elimina', component: EliminaSoftwareComponent},
+    { path: 'software/del/:id', component: EliminaSoftwareComponent},
 ];
 
 export default routes;
