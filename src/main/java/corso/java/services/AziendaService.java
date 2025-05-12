@@ -23,8 +23,11 @@ public class AziendaService implements AziendaServiceInter {
 	public List<DTO_azienda> getAllAziende() {
 		try {
 			List<Azienda_Entity> aziende = aziendaRepository.findAll();
-			return aziende.stream().map(a -> DTO_azienda.builder().withId(a.getId()).withNome(a.getNome())
-					.withPartitaIva(a.getPartitaIva()).build()).toList();
+			return aziende.stream()
+					.map(a -> DTO_azienda.builder().withId(a.getId()).withNome(a.getNome())
+							.withPartitaIva(a.getPartitaIva()).withIndirizzo(a.getIndirizzo()).withEmail(a.getEmail())
+							.build())
+					.toList();
 		} catch (Exception e) {
 			throw new ServiceException("Errore!");
 		}
@@ -33,8 +36,12 @@ public class AziendaService implements AziendaServiceInter {
 	@Override
 	public void addAzienda(DTO_azienda aziendaDto) {
 		Azienda_Entity azienda = Azienda_Entity.builder().withId(aziendaDto.getId()).withNome(aziendaDto.getNome())
-				.withPartitaIva(aziendaDto.getPartitaIva()).build();
-		aziendaRepository.save(azienda);
+				.withPartitaIva(aziendaDto.getPartitaIva()).withIndirizzo(aziendaDto.getIndirizzo())
+				.withEmail(aziendaDto.getEmail()).build();
+		String pi = azienda.getPartitaIva();
+		if(!(aziendaRepository.existsByPartitaIva(pi))) {;
+			aziendaRepository.save(azienda);
+		}
 	}
 
 	@Override

@@ -18,6 +18,9 @@ public class Azienda_Entity {
 	private String nome;
 	@Column(name = "partita_iva", nullable = false,length=11)
 	private String partitaIva;
-
+	@Column(name="indirizzo", nullable=false, length=55)
+	private String indirizzo;
+	@Column(name="email", nullable=false, length=55)
+	private String email;
 }
 

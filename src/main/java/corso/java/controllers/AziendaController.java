@@ -36,13 +36,12 @@ public class AziendaController {
 	}
 
 	@PostMapping
-	public ResponseEntity<String> addAzienda(@RequestBody DTO_azienda a) {
+	public ResponseEntity<DTO_azienda> addAzienda(@RequestBody DTO_azienda a) {
 		aziendaService.addAzienda(a);
-		return ResponseEntity.status(HttpStatus.CREATED).body("Nuova azienda inserita con successo!");
+		return ResponseEntity.ok(a);
 	}
 	/*
-	 * public ResponseEntity<DTO_azienda> addAzienda(@RequestBody DTO_azienda a){
-	 * aziendaService.addAzienda(a); return ResponseEntity.ok(a); }
+	 * 
 	 */
 
 	@DeleteMapping("/delete/{idCompany}")

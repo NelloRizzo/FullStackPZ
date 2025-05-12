@@ -9,4 +9,6 @@ public class DTO_azienda {
 	private int id;
 	private String nome;
 	private String partitaIva;
+	private String indirizzo;
+	private String email;
 }
