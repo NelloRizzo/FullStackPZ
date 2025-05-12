@@ -1,0 +1,24 @@
+h2 {
+    font-family: monospace;
+    color:  rgb(217, 217, 22);
+    background-color: black;
+    border-radius: 0.3em;
+}
+
+div {
+    font-family: sans-serif;
+    background-color: black;
+    color: rgb(217, 217, 22);
+    border-radius: 0.3em;
+    border-color: yellowgreen;
+}
+
+button {
+    background-color: yellowgreen;
+    border-radius: 0.3em;
+}
+
+button:hover {
+    background-color: chocolate;
+    cursor: pointer;
+}
