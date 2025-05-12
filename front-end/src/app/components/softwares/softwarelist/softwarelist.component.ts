@@ -14,28 +14,12 @@ import { RouterLink } from '@angular/router';
 })
 export class SoftwarelistComponent implements OnInit {
   softwares: Software[] = [];
-  idDaEliminare: number = 0;
+
   constructor(private softwareService: SoftwareService) { }
 
   ngOnInit(): void {
     this.softwareService.getallsoftwares().subscribe(response => {
       this.softwares = response;
-    })
-  }
-  cancellaSoftware(id: number) {
-    if(this.idDaEliminare <= 0) {
-      alert('Inserire un id valido!');
-      return
-    }
-  
-    this.softwareService.cancellaSoftware(this.idDaEliminare).subscribe(() => {
-      alert('Software eliminato con successo!');
-    },
-     error => {
-      console.error('Id:', error);
-      alert('Software non presente in database!');
-     
-
     })
   }
 }
