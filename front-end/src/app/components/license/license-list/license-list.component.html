@@ -1,4 +1,4 @@
-<a routerLink="/license/add">Aggiungi Licenza</a>
+<a routerLink="/license/add">Add your License</a>
 <p>This is the list of our licenses:</p>
 <ul>
     <li *ngFor="let license of licenseList">
@@ -7,6 +7,8 @@
         Price: €{{license.price}} <br>
         Type: {{license.type}}<br>
         Software: {{license.software.name}}<br>
+        
+       <a [routerLink]='["/license/delete",license.id]'>Elimina</a>
     </div>
 
     </li>
