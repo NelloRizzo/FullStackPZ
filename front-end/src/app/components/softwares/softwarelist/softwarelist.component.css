@@ -2,6 +2,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgb(228, 13, 13);
   border-radius: 0.4em;
+  cursor: not-allowed;
 }
 
 ul {
@@ -27,11 +28,12 @@ li:hover {
 }
 
 h2 {
+  text-align: center;
   font-size: 23px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
   margin: 1em;
-  color: black;
+  color: rgb(14, 11, 57);
 }
 a {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
