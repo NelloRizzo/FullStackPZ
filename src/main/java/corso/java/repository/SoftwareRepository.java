@@ -7,6 +7,6 @@ import corso.java.entities.Software_Entity;
 
 public interface SoftwareRepository extends JpaRepository<Software_Entity, Integer> {
 
-	void deleteById(Integer id);
+	void deleteById(int id);
 
 	}

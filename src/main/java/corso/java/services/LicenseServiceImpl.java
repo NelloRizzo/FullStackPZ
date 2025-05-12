@@ -1,17 +1,14 @@
 package corso.java.services;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import corso.java.DTO.DTO_azienda;
 import corso.java.DTO.LicenseDTO;
 import corso.java.DTO.LicenseOutputDTO;
-import corso.java.entities.Azienda_Entity;
 import corso.java.entities.BoughtLicenseEntity;
 import corso.java.entities.LicenseEntity;
 import corso.java.repository.AziendaRepository;
