@@ -35,6 +35,11 @@
     background-color: red;
     border-radius: 10px;
   }
+   .deleteButton:hover{
+
+    background-color: rgb(154, 0, 0);
+    
+  }
 
   .addButton{
     margin-bottom: 10px;

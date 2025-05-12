@@ -20,7 +20,7 @@ export class CompanyServiceService {
   addCompany(newCompany: Company) : Observable<Company>{
     return this.http.post<Company>('/api/azienda', newCompany);
   }
- 
-  
-  
+  deleteCompany(idCompany: number): Observable<void>{
+    return this.http.delete<void>('/api/azienda/delete/'+idCompany);
+  }
 }

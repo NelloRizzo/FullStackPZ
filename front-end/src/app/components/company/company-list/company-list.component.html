@@ -7,7 +7,11 @@
     </div>
     <div *ngIf="companies.length > 0" else noCompanies>
         <div class="rigaDati" *ngFor="let company of companies">
-            <div class="colonna">{{company.nome}}</div><div class="colonna">{{company.partitaIva}}</div><div><button class="deleteButton">Elimina</button></div>
+            <div class="colonna">{{company.nome}}</div>
+            <div class="colonna">{{company.partitaIva}}</div>
+            <button class="deleteButton">
+                <a [routerLink]="['/company/delete',company.id]">Elimina</a>
+            </button>
         </div> 
     </div>
 </div>
