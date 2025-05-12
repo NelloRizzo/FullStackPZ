@@ -1,0 +1,8 @@
+.delete-banner{
+    border: 5px dashed #007bff;
+    border-radius: 15px;
+    background-color: #c3c3c3;
+    text-align: center;
+    padding: 10px;
+
+}

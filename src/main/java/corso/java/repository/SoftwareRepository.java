@@ -5,8 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import corso.java.entities.Software_Entity;
 
-public interface SoftwareRepository extends JpaRepository<Software_Entity, Long> {
+public interface SoftwareRepository extends JpaRepository<Software_Entity, Integer> {
 
-	void deleteById(Long id);
+	void deleteById(int id);
 
 	}

@@ -14,7 +14,10 @@ export class DeleteCompanyComponent {
     private router: Router, private CompanyService: CompanyServiceService){}
 
     ngOnInit(): void {
-    this.id = Number(this.route.snapshot.paramMap.get('id'));
+      this.route.paramMap.subscribe(params => {
+    this.id = Number(params.get('idCompany'));
+    console.log("ID ricevuto:", this.id);
+  });
   }
 
   confirmDeletion() {
@@ -25,5 +28,4 @@ export class DeleteCompanyComponent {
   cancel() {
     this.router.navigate(['/company/list']);
   }
-    
 }
