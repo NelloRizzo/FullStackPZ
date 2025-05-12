@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Software } from '../../../services/models';
+import { Software } from '../../../services/softwareModel';
 
 import { NgFor } from '@angular/common';
 import { SoftwareService } from '../../../services/software-services/software.service';
@@ -13,13 +13,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './softwarelist.component.css'
 })
 export class SoftwarelistComponent implements OnInit {
+
   softwares: Software[] = [];
 
   constructor(private softwareService: SoftwareService) { }
 
   ngOnInit(): void {
-    this.softwareService.getallsoftwares().subscribe(response => {
+    this.softwareService.getAllSoftwares().subscribe(response => {
       this.softwares = response;
-    })
+    });
   }
 }
