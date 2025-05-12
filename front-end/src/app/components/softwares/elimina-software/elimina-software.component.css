@@ -3,6 +3,7 @@ h2 {
     color:  rgb(217, 217, 22);
     background-color: black;
     border-radius: 0.3em;
+    margin: 1em;
 }
 
 div {
@@ -11,6 +12,7 @@ div {
     color: rgb(217, 217, 22);
     border-radius: 0.3em;
     border-color: yellowgreen;
+    margin: 0.5em;
 }
 
 button {
