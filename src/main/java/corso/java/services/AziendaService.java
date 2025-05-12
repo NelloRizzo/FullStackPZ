@@ -47,4 +47,13 @@ public class AziendaService implements AziendaServiceInter {
 				.withPartitaIva(company.getPartitaIva()).build();
 	}
 
+	@Override
+	public boolean deleteCompany(int idCompany) {
+		if (aziendaRepository.existsById(idCompany)) {
+			aziendaRepository.deleteById(idCompany);
+			return true;
+		} else
+			return false;
+	}
+
 }
