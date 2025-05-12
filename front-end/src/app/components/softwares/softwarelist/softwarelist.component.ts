@@ -13,13 +13,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './softwarelist.component.css'
 })
 export class SoftwarelistComponent implements OnInit {
+
   softwares: Software[] = [];
 
   constructor(private softwareService: SoftwareService) { }
 
   ngOnInit(): void {
-    this.softwareService.getallsoftwares().subscribe(response => {
+    this.softwareService.getAllSoftwares().subscribe(response => {
       this.softwares = response;
-    })
+    });
   }
 }
