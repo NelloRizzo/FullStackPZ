@@ -5,11 +5,13 @@
         <li *ngFor="let software of softwares">
             {{software.name}} - {{software.version}}
         </li>
-        <h2>Elimina Software per ID</h2>
+        <!-- <h2>Elimina Software per ID</h2>
         <form (ngSubmit)="cancellaSoftware(idDaEliminare)" #form="ngForm">
             <label for="id">ID Software da eliminare:</label>
             <input type="number" [(ngModel)]="idDaEliminare" name="id" required />
             <button type="submit">Elimina</button>
-        </form>
+            
+        </form > -->
+    <a [routerLink]="['/software/add']">Aggiungi Software</a>
     </ul>
 </body>

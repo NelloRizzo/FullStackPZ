@@ -64,3 +64,8 @@ h2 {
     margin-bottom: 10px;
     color:black;
 }
+a {
+    text-decoration: none;
+    color: #070707;
+    transition: color 0.3s ease;
+}
