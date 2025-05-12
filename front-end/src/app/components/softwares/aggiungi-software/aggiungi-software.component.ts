@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Software } from '../../../services/models';
+import { Software } from '../../../services/softwareModel';
 import { FormsModule } from '@angular/forms';
 import { SoftwareService } from '../../../services/software-services/software.service';
 import { Router } from '@angular/router';

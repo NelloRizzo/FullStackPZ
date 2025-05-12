@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Software } from '../../../services/models';
+import { Software } from '../../../services/softwareModel';
 
 import { NgFor } from '@angular/common';
 import { SoftwareService } from '../../../services/software-services/software.service';
