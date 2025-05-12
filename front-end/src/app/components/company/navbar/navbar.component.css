@@ -1,0 +1,14 @@
+.navbar {
+    background: #007BFF;
+    padding: 15px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
