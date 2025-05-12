@@ -6,6 +6,6 @@
     <label for="partitaIva">Partita IVA:</label>
     <input id="partitaIva" [(ngModel)]="newCompany.partitaIva" name="partitaIva" required />
   
-    <button type="submit">Aggiungi Azienda</button>
+    <button type="button" (click)="onSubmit()">Aggiungi Azienda</button>
   </form>
 </div>
