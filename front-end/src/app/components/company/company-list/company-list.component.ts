@@ -15,9 +15,10 @@ import { DeleteCompanyComponent } from '../delete-company/delete-company.compone
 export class CompanyListComponent {
   companies : Company[] = [];
   companyToDelete?: Company;
+  showDetails = false;
   
   constructor(private CompanyService: CompanyServiceService){}
-   
+  
   ngOnInit(): void {
       this.CompanyService.getAllCompanies()
       .subscribe({

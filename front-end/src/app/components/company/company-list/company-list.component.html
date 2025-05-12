@@ -5,15 +5,18 @@
     <div class="rigaTitoli">
         <div class="colonna">Nome Azienda</div>
         <div class="colonna">Partita IVA</div>
-        <div class="colonna">Indirizzo</div>
-        <div class="colonna">Email</div>
+        <div class="colonna" *ngIf="showDetails">Indirizzo</div>
+        <div class="colonna" *ngIf="showDetails">Email</div>
+        <div class="colonna">
+             <button (click)="showDetails = !showDetails">Dettagli</button>
+        </div>
     </div>
     <div *ngIf="companies.length > 0" else noCompanies>
         <div class="rigaDati" *ngFor="let company of companies">
             <div class="colonna">{{company.nome}}</div>
             <div class="colonna">{{company.partitaIva}}</div>
-            <div class="colonna">{{company.indirizzo}}</div>
-            <div class="colonna">{{company.email}}</div>
+            <div class="colonna" *ngIf="showDetails">{{company.indirizzo}}</div>
+            <div class="colonna" *ngIf="showDetails">{{company.email}}</div>
             <button class="deleteButton">
                 <a [routerLink]="['/company/delete',company.id]">Elimina</a>
             </button>
