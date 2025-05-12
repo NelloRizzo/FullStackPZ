@@ -6,7 +6,7 @@ import { licenseModel } from '../../../services/models/licenseModel';
 
 @Component({
   selector: 'app-license-list',
-  imports: [NgFor],
+  imports: [NgFor,LicenseComponent],
   templateUrl: './license-list.component.html',
   styleUrl: './license-list.component.css'
 })
@@ -16,7 +16,7 @@ export class LicenseListComponent {
   licenseList:licenseModel[]=[]
 
   ngOnInit(){
-    this.licenseService.getLicences().subscribe(l=>{
+    this.licenseService.getLicenses().subscribe(l=>{
       this.licenseList=l;
     });
   }
