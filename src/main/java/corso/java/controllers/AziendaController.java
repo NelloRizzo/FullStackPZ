@@ -39,5 +39,14 @@ public class AziendaController {
 		aziendaService.addAzienda(a);
 		return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
+	/*
+	 * public ResponseEntity<DTO_azienda> addAzienda(@RequestBody DTO_azienda a){
+	 * 		aziendaService.addAzienda(a);
+	 *		return ResponseEntity.ok(a);
+	 *}
+	 */
+		
+	
+	
 	
 }

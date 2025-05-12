@@ -29,3 +29,27 @@
   .rigaDati:hover {
     background: #f1f1f1;
   }
+
+  .deleteButton{
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+  }
+
+  .addButton{
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border: 5px dashed #007bff;
+    background-color: white;
+    border-radius: 15px;
+    width: fit-content;
+    color: #007bff;
+  }
+
+  .addButton:hover{
+    background-color: #007bff;
+    color: white;
+  }
