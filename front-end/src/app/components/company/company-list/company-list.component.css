@@ -29,3 +29,21 @@
   .rigaDati:hover {
     background: #f1f1f1;
   }
+
+  .addCompanyStyle{
+    border: 5px dashed #007bff;;
+    border-radius: 15px 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    color:  #007bff;
+    width: fit-content;
+  }
+
+  .addCompanyStyle:hover{
+    background-color: rgb(151, 151, 151);
+    color: #007bff;
+  }
