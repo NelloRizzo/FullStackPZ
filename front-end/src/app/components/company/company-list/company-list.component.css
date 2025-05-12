@@ -1,19 +1,31 @@
-.listaAziende{
-    border: 3px solid black;
-    border-radius: 15px 50px 30px;
-    width: fit-content;
-    background: greenyellow;
-}
-
-.rigaTitoli{
+.listaAziende {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rigaTitoli {
     display: flex;
-    gap: 10px;
-    background: green;
+    font-weight: bold;
+    background: #007bff;
     color: white;
-}
-
-.rigaDati{
+    padding: 10px;
+  }
+  
+  .rigaDati {
     display: flex;
-    gap: 10px;
-    color: grey;
-}
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .colonna {
+    flex: 1;
+    padding: 5px;
+  }
+  
+  .rigaDati:hover {
+    background: #f1f1f1;
+  }
