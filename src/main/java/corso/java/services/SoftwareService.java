@@ -8,6 +8,6 @@ public interface SoftwareService {
 	
 	public List<DTO_software> getAllSoftwares();
 	public void  generaSoftware(DTO_software softwaredto);
-	public void eliminaSoftware(Long id);
+	public void eliminaSoftware(Integer id);
 
 }

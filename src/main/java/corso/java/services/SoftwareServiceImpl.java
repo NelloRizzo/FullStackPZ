@@ -38,7 +38,7 @@ public class SoftwareServiceImpl implements SoftwareService{
 	}
 
 	@Override
-	public void eliminaSoftware(Long id) {
+	public void eliminaSoftware(Integer id) {
 		if (!softwareRepository.existsById(id)) {
 			throw new IllegalArgumentException("Software non presente in Database");
 			
