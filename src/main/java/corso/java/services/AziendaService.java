@@ -52,18 +52,15 @@ public class AziendaService implements AziendaServiceInter {
 	@Override
 	public void addAzienda(DTO_azienda aziendaDto) {
 		Azienda_Entity azienda = costruisciDaDto(aziendaDto);
-		String pi = azienda.getPartitaIva();
-		if(!(aziendaRepository.existsByPartitaIva(pi))) {;
+		if(!(aziendaRepository.existsByPartitaIva(azienda.getPartitaIva()))) {;
 			aziendaRepository.save(azienda);
 		}
 	}
 
 	@Override
 	public DTO_azienda getCompanyById(int idCompany) {
-
 		Azienda_Entity company = aziendaRepository.findById(idCompany)
 				.orElseThrow(() -> new RuntimeException("Azienda non trovata!"));
-
 		return costruisciDaEntity(company);
 	}
 
@@ -72,8 +69,8 @@ public class AziendaService implements AziendaServiceInter {
 		if (aziendaRepository.existsById(idCompany)) {
 			aziendaRepository.deleteById(idCompany);
 			return true;
-		} else
-			return false;
+		}
+		return false;
 	}
 
 }
