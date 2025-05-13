@@ -43,8 +43,7 @@ public class AziendaService implements AziendaServiceInter {
 	public List<DTO_azienda> getAllAziende() {
 		try {
 			List<Azienda_Entity> aziende = aziendaRepository.findAll();
-			return aziende.stream()
-					.map(a -> costruisciDaEntity(a)).toList();
+			return aziende.stream().map(a -> costruisciDaEntity(a)).toList();
 		} catch (Exception e) {
 			throw new ServiceException("Errore!");
 		}
