@@ -18,16 +18,33 @@ public class AziendaService implements AziendaServiceInter {
 	public AziendaService(AziendaRepository aziendaRepository) {
 		this.aziendaRepository = aziendaRepository;
 	}
+	
+	private DTO_azienda costruisciDaEntity(Azienda_Entity a) {
+		return DTO_azienda.builder()
+		.withId(a.getId())
+		.withNome(a.getNome())
+		.withPartitaIva(a.getPartitaIva())
+		.withIndirizzo(a.getIndirizzo())
+		.withEmail(a.getEmail())
+		.build();
+	}
+	
+	private Azienda_Entity costruisciDaDto(DTO_azienda a) {
+		return Azienda_Entity.builder()
+				.withId(a.getId())
+				.withNome(a.getNome())
+				.withPartitaIva(a.getPartitaIva())
+				.withIndirizzo(a.getIndirizzo())
+				.withEmail(a.getEmail())
+				.build();
+	}
 
 	@Override
 	public List<DTO_azienda> getAllAziende() {
 		try {
 			List<Azienda_Entity> aziende = aziendaRepository.findAll();
 			return aziende.stream()
-					.map(a -> DTO_azienda.builder().withId(a.getId()).withNome(a.getNome())
-							.withPartitaIva(a.getPartitaIva()).withIndirizzo(a.getIndirizzo()).withEmail(a.getEmail())
-							.build())
-					.toList();
+					.map(a -> costruisciDaEntity(a)).toList();
 		} catch (Exception e) {
 			throw new ServiceException("Errore!");
 		}
@@ -35,9 +52,7 @@ public class AziendaService implements AziendaServiceInter {
 
 	@Override
 	public void addAzienda(DTO_azienda aziendaDto) {
-		Azienda_Entity azienda = Azienda_Entity.builder().withId(aziendaDto.getId()).withNome(aziendaDto.getNome())
-				.withPartitaIva(aziendaDto.getPartitaIva()).withIndirizzo(aziendaDto.getIndirizzo())
-				.withEmail(aziendaDto.getEmail()).build();
+		Azienda_Entity azienda = costruisciDaDto(aziendaDto);
 		String pi = azienda.getPartitaIva();
 		if(!(aziendaRepository.existsByPartitaIva(pi))) {;
 			aziendaRepository.save(azienda);
@@ -50,8 +65,7 @@ public class AziendaService implements AziendaServiceInter {
 		Azienda_Entity company = aziendaRepository.findById(idCompany)
 				.orElseThrow(() -> new RuntimeException("Azienda non trovata!"));
 
-		return DTO_azienda.builder().withId(company.getId()).withNome(company.getNome())
-				.withPartitaIva(company.getPartitaIva()).build();
+		return costruisciDaEntity(company);
 	}
 
 	@Override
