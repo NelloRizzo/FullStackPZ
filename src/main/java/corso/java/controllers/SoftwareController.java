@@ -38,7 +38,7 @@ public class SoftwareController {
 
 	}
 	@DeleteMapping ("/delete/{id}")
-	public void cancellaSoftware(@PathVariable Long id) {
+	public void cancellaSoftware(@PathVariable int id) {
 		softwareService.eliminaSoftware(id);
 		
 	}

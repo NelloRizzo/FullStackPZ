@@ -22,7 +22,9 @@ public class SoftwareServiceImpl implements SoftwareService{
 				.map(
 				software -> DTO_software.builder()
 				.withName(software.getName())
-				.withVersion(software.getVersion()).build())
+				.withVersion(software.getVersion())
+				.withId(software.getId())
+				.build())
 				.collect(Collectors.toList());
 
 		return softwareList;
@@ -38,7 +40,7 @@ public class SoftwareServiceImpl implements SoftwareService{
 	}
 
 	@Override
-	public void eliminaSoftware(Long id) {
+	public void eliminaSoftware(int id) {
 		if (!softwareRepository.existsById(id)) {
 			throw new IllegalArgumentException("Software non presente in Database");
 			

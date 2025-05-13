@@ -1,66 +1,58 @@
 body {
-    background-color: red;
-    border-radius: 0.4em;
-}
-/* General styles for better visibility */
-:host {
-    display: block;
-    padding: 20px;
-    background-color: #f9f9f9;
-    color: black;
-    font-family: Arial, sans-serif;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(228, 13, 13);
+  border-radius: 0.4em;
+  cursor: not-allowed;
 }
 
-/* Header styling */
-header {
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-/* List styling */
 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0;
+  list-style-type: upper-roman;
+  padding: 0;
+  margin: 10px 0;
+  background-color: rgb(228, 13, 13);
+  border-radius: 0.3em;
 }
 
 li {
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #e3f2fd;
-    border: 1px solid #90caf9;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: rgb(206, 206, 17);
+  border: 1px solid #0b0b0b;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 li:hover {
-    background-color: #bbdefb;
-    cursor: pointer;
-}
-
-/* Button styling */
-button {
-    padding: 10px 15px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
+  background-color: #0909e3;
+  cursor: not-allowed;
 }
 
 h2 {
-    font-size: 20px;
-    font-family: Arial, sans-serif; 
-    font-weight: bold;
-    margin-bottom: 10px;
-    color:black;
+  text-align: center;
+  font-size: 23px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  margin: 1em;
+  color: rgb(14, 11, 57);
+}
+a {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+  color: #3a0303;
+  transition: color 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px;
+  display: inline-block;
+  text-decoration: underline;
+  background-color: rgb(49, 164, 29);
+  border-radius: 0.3em;
+  border:#0909e3;
+}
+
+a:hover {
+  color: #05494f;
+  text-decoration: underline;
+  cursor: pointer;
 }

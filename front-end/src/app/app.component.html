@@ -1,2 +1,11 @@
 <h1>{{title}}</h1>
-<app-license-list></app-license-list>
+<nav>
+    <ul>
+        <li><a routerLink='/company/list'>Aziende</a></li>
+        <li><a routerLink='/software/list'>Software</a></li>
+        <li><a routerLink='/license/list'>Licenze</a></li>
+    </ul>
+</nav>
+<main>
+    <router-outlet></router-outlet>
+</main>

@@ -1,20 +1,42 @@
-h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  app-license-list {
-    display: block;
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
+}
+
+a,
+a:visited {
+  padding: 1em;
+  margin: 0 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  font-variant: small-caps;
+}
+
+a:hover {
+  background-color: gray;
+  color: white;
+}
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 1rem;
+}
